@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/collegeDocument', function () {
-    return view('college_docs');
-});
-Route::get('/testpage', function () {
-    return view('test');
-});
+
+
+Route::get('/TCdocument','App\Http\Controllers\DocumentController@tcconfig');
+
+Route::post('/TcCcGenerate','App\Http\Controllers\DocumentController@TcCcGenerate');
